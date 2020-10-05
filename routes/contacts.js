@@ -86,7 +86,7 @@ router.put("/:id", middleware_auth, async (req, res) => {
   }
 });
 
-router.delete("/:id", auth, async (req, res) => {
+router.delete("/:id", middleware_auth, async (req, res) => {
   try {
     const contact = await Contact.findById(req.params.id);
 
